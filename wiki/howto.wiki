@@ -27,6 +27,7 @@ You can run the tool with '_java -jar saaf.jar_' if all libraries are present in
 
 SAAF will automatically start x analysis threads, where x is your number of cores-1. You can define the number of threads in the config file. If you make use of many analysis threads, you might have to adjust the heap space available to your Java VM. You can change this value in the run script or directly as a VM parameter.
 
+All available parameters and a description thereof can be seen with the _-h_ parameter.
 
 = Results = 
 
