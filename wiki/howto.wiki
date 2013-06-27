@@ -1,25 +1,9 @@
 #summary How to setup and use SAAF.
 
+
 = Dependencies =
 
-In order to use our tool you have to check out the source, provide the following libraries as jar files, put the into the 'libs' directory and then compile it. The version should hopefully not matter, newer versions should be fine (but too old versions might not work).
- * ST-4.0.7.jar (!StringTemplate)
- * antlr-runtime-3.4.jar
- * apktool-1.5.2.jar
- * asm-debug-all-3.2.jar
- * commons-cli-1.2.jar (Apache commons)
- * commons-io-2.4.jar (Apache commons)
- * commons-lang-2.6.jar (Apache commons)
- * dex-ir-1.11.jar
- * dex-reader-1.14.jar
- * dex-translator-0.0.9.13.jar
- * httpcore-4.1.4.jar (Apache commons)
- * log4j-1.2.17.jar
- * mysql-connector-java-5.1.21-bin.jar
- * slf4j-api-1.5.6.jar
- * slf4j-simple-1.5.6.jar
- * smali-1.4.2.jar
-
+All dependencies are included in the source tree. If you check everything out, you should be fine.
 
 = Usage =
 
@@ -28,6 +12,7 @@ You can run the tool with '_java -jar saaf.jar_' if all libraries are present in
 SAAF will automatically start x analysis threads, where x is your number of cores-1. You can define the number of threads in the config file. If you make use of many analysis threads, you might have to adjust the heap space available to your Java VM. You can change this value in the run script or directly as a VM parameter.
 
 All available parameters and a description thereof can be seen with the _-h_ parameter.
+
 
 = Results = 
 
@@ -74,6 +59,6 @@ Just take a look into the config directory and edit the corresponding xml files 
 = TODO =
  * The GUI needs a lot of love (currently all operations run on the main thread).
  * The Slicing algorithm cannot pinpoint all types correctly etc and will certainly miss some values.
- * The XML configuration for the quick checks (heurstic) does not fit the needs, it has to be rewritten.
+ * The XML configuration for the quick checks (heuristic) does not fit the needs, it has to be rewritten.
  * The DB column and table names need an overhaul.
  * We are sure there are some bugs to be found.
